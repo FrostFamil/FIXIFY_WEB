@@ -1,0 +1,28 @@
+{
+  "name": "myportfoliosite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "axios": "^0.19.2",
+    "font-awesome": "^4.7.0",
+    "mdbreact": "^4.25.2",
+    "react": "^16.2.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.7.1",
+    "react-mdl": "^1.11.0",
+    "react-picker": "^1.2.15",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
