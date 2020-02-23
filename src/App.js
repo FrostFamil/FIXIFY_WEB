@@ -10,20 +10,32 @@ class App extends Component {
       <div className="demo-big-content">
     <Layout>
         <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">FIXIFY</Link>} scroll>
-            <Navigation>
+            {
+              window.$token ?
+
+              <Navigation>
+                <Link to={`/requests/${window.$token}`}>Requests</Link>
+                <Link to={`/profile/${window.$token}`}>Profile</Link>
+              </Navigation>:
+              <Navigation>
                 <Link to="/login">Login</Link>
                 <Link to="/aboutme">About Us</Link>
-                <Link to="/projects">Requests</Link>
-                <Link to="/contact">Profile</Link>
-            </Navigation>
+              </Navigation>
+            }
         </Header>
         <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">FIXIFY</Link>}>
-            <Navigation>
-              <Link to="/login">Login</Link>
-              <Link to="/aboutme">About Us</Link>
-              <Link to="/projects">Requests</Link>
-              <Link to="/contact">Profile</Link>
-            </Navigation>
+            {
+              window.$token ?
+
+              <Navigation>
+                <Link to={`/requests/${window.$token}`}>Requests</Link>
+                <Link to={`/profile/${window.$token}`}>Profile</Link>
+              </Navigation>:
+              <Navigation>
+                <Link to="/login">Login</Link>
+                <Link to="/aboutme">About Us</Link>
+              </Navigation>
+            }
         </Drawer>
         <Content>
             <div className="page-content" />

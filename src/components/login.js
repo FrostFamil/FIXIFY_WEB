@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
 import loginRequest from '../requests/loginRequest';
+import fixerLoginRequest from '../requests/fixerLoginRequest';
+import {profileRequest, getFixerProfileRequest} from '../requests/profileRequest';
 
 class Login extends Component {
 
@@ -16,7 +18,42 @@ class Login extends Component {
     const { email, password } = this.state;
 
     loginRequest(email, password).then(res => {
-      console.log(res);   
+
+      if(res){
+        if(res.token){
+
+          window.$token = res.token;
+          window.$userId = res.userId;
+          
+          profileRequest(window.$userId).then(res => {
+            window.$fName = res.firstName;
+            window.$lName = res.lastName;
+            window.$email = res.email;
+            window.$phone = res.phone;
+  
+            this.props.history.push("/")
+          })
+        }
+      }else{
+        fixerLoginRequest(email, password).then(res => {
+          
+          if(res.token){
+            
+            window.$token = res.token;
+            window.$fixerId = res.fixerId;
+
+            getFixerProfileRequest(window.$fixerId).then(res => {
+              window.$fName = res.firstName;
+              window.$lName = res.lastName;
+              window.$email = res.email;
+              window.$phone = res.phone;
+              window.$serviceType = res.status;
+    
+              this.props.history.push("/")
+            })
+          }
+        })
+      }
     })
   }
 

@@ -14,6 +14,7 @@
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.2.0",
     "react-fontawesome": "^1.7.1",
+    "react-global": "^0.1.8",
     "react-mdl": "^1.11.0",
     "react-picker": "^1.2.15",
     "react-router-dom": "^4.2.2",
