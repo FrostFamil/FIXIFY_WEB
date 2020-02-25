@@ -8,6 +8,7 @@ import Requests from './requests';
 import Login from './login';
 import RegisterFixer from './registerFixer';
 import RegisterUser from './registerUser';
+import NewRequest from './newRequest';
 
 
 const Main = () => (
@@ -19,6 +20,7 @@ const Main = () => (
     <Route path="/login" component={Login} />
     <Route path="/registerFixer" component={RegisterFixer} />
     <Route path="/registerUser" component={RegisterUser} />
+    <Route path={`/newRequest/${window.$token}`} component={NewRequest} />
   </Switch>
 )
 

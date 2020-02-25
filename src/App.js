@@ -14,6 +14,10 @@ class App extends Component {
               window.$token ?
 
               <Navigation>
+                {
+                  window.$userId ?
+                  <Link to={`/newRequest/${window.$token}`}>New Request</Link>:null
+                }
                 <Link to={`/requests/${window.$token}`}>Requests</Link>
                 <Link to={`/profile/${window.$token}`}>Profile</Link>
               </Navigation>:
@@ -28,6 +32,10 @@ class App extends Component {
               window.$token ?
 
               <Navigation>
+                {
+                  window.$userId ?
+                  <Link to={`/newRequest/${window.$token}`}>New Request</Link>:null
+                }
                 <Link to={`/requests/${window.$token}`}>Requests</Link>
                 <Link to={`/profile/${window.$token}`}>Profile</Link>
               </Navigation>:
