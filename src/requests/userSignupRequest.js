@@ -3,7 +3,7 @@ import axios from 'axios';
 const userSignupRequest = (email, password, firstName, lastName, phone) => {
     return axios({
     method: 'put',
-    url: 'http://192.168.0.87:8080/auth/signup',
+    url: 'http://192.168.0.88:8080/auth/signup',
     data: {
         email: email,
         password: password,
