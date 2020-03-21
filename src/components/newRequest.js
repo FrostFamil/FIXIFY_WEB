@@ -63,7 +63,7 @@ export default class NewRequest extends Component {
                 <Cell col={6}>
                     <div className="inner-container">
                     <h1 className="header" style={{ marginLeft: 125, color: 'orange'}} >
-                        FIXER
+                        USER
                     </h1>
                     <div className="box">
 
