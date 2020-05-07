@@ -3,7 +3,7 @@ import axios from 'axios';
 const userRequests = (creator) => {
     return axios({
     method: 'post',
-    url: 'http://localhost:8080/requests/getNotAcceptedRequest',
+    url: 'http://192.168.0.87:8080/requests/getNotAcceptedRequest',
     data: {
         creator: creator
     }
@@ -18,7 +18,7 @@ const userRequests = (creator) => {
 const getAllPendingRequests = (creator) => {
     return axios({
     method: 'post',
-    url: 'http://localhost:8080/requests/getPendingRequest',
+    url: 'http://192.168.0.87:8080/requests/getPendingRequest',
     data: {
         creator: creator
     }
@@ -33,7 +33,7 @@ const getAllPendingRequests = (creator) => {
 const getAllAcceptedRequests = (creator) => {
     return axios({
     method: 'post',
-    url: 'http://localhost:8080/requests/getAcceptedRequest',
+    url: 'http://192.168.0.87:8080/requests/getAcceptedRequest',
     data: {
         creator: creator
     }
@@ -48,7 +48,7 @@ const getAllAcceptedRequests = (creator) => {
 const getAllFinishedRequests = (creator) => {
     return axios({
     method: 'post',
-    url: 'http://localhost:8080/requests/getFinishedRequest',
+    url: 'http://192.168.0.87:8080/requests/getFinishedRequest',
     data: {
         creator: creator
     }
