@@ -3,7 +3,7 @@ import axios from 'axios';
 const fixerRequests = (acceptor) => {
     return axios({
     method: 'post',
-    url: 'http://192.168.0.87:8080/requests/fixerGetPendingRequest',
+    url: 'http://192.168.0.89:8080/requests/fixerGetPendingRequest',
     data: {
         acceptor: acceptor
     }
@@ -19,7 +19,7 @@ const fixerRequests = (acceptor) => {
 const fixerAddFinishedRequestToHistory = (acceptor) => {
     return axios({
     method: 'post',
-    url: 'http://192.168.0.87:8080/requests/getAllHistoriesOfFixer',
+    url: 'http://192.168.0.89:8080/requests/getAllHistoriesOfFixer',
     data: {
         acceptor: acceptor
     }
@@ -34,7 +34,7 @@ const fixerAddFinishedRequestToHistory = (acceptor) => {
 const fixerGetRelatedRequests = (serviceType) => {
     return axios({
     method: 'post',
-    url: 'http://192.168.0.87:8080/requests/fixerGetAllRelatedRequest',
+    url: 'http://192.168.0.89:8080/requests/fixerGetAllRelatedRequest',
     data: {
         serviceType: serviceType
     }
